@@ -1,0 +1,19 @@
+{
+  "name": "rapidus-meta",
+  "version": "0.1.0",
+  "main": "./rapidus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keis/rapidus-meta.git"
+  },
+  "scripts": {
+    "prepublish": "node bin/create-meta ./package.json"
+  },
+  "dependencies": {
+    "rapidus": "^0.3.4",
+    "rapidus-configure": "^0.1.1",
+    "rapidus-connect-logger": "^0.2.0",
+    "rapidus-sparkle": "^0.2.5"
+  },
+  "devDependencies": {}
+}

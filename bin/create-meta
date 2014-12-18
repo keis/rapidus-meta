@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+
+function writeModule(name) {
+    var fileName = name.replace('rapidus-', '') + '.js';
+
+    fs.writeFile(fileName, "module.exports = require('" + name + "');", function (err, data) {
+        if (err) {
+            console.error(err);
+        }
+        console.log(fileName);
+    })
+}
+
+fs.readFile(process.argv[2], function (err, data) {
+    var dep;
+
+    if (err) {
+        return console.error(err);
+    }
+
+    for (dep in JSON.parse(data).dependencies) {
+        writeModule(dep);
+    }
+});
