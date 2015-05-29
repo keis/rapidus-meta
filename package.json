@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "rapidus": "^0.3.4",
-    "rapidus-configure": "^0.1.1",
+    "rapidus-configure": "^1.0.0",
     "rapidus-connect-logger": "^0.2.0",
-    "rapidus-sparkle": "^0.2.5"
+    "rapidus-sparkle": "^1.0.1"
   },
   "devDependencies": {}
 }
